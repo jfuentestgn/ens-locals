@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: net.jfuentestgn.enslocals
+---
+testFramework: junit
+sourceLanguage: java

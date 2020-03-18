@@ -1,0 +1,29 @@
+---
+micronaut:
+  application:
+    name: net-jfuentestgn-enslocals
+
+---
+micronaut:
+  metrics:
+    enabled: true
+
+---
+#datasources.default: {}
+---
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''    
+jpa:
+  default:
+    packages-to-scan:
+      - 'net.jfuentestgn.enslocals.domain'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
